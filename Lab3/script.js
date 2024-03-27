@@ -1,11 +1,10 @@
 function newElement() {
     var inputValue = document.getElementById("myInput").value;
-    if (inputValue === '') {
-        alert("You must write something!");
-    } else {
+    if (!inputValue ) {
+        return
+    }
         var li = document.createElement("li");
         li.textContent = inputValue;
-        
         
         var checkBtn = document.createElement("button");
         checkBtn.className = "checkBtn";
@@ -14,7 +13,6 @@ function newElement() {
             li.classList.toggle("checked");
         };
         li.appendChild(checkBtn);
-        
         
         var deleteBtn = document.createElement("button");
         deleteBtn.className = "deleteBtn";
@@ -25,6 +23,7 @@ function newElement() {
         li.appendChild(deleteBtn);
         
         document.getElementById("myUL").appendChild(li);
-    }
+        
+    
     document.getElementById("myInput").value = "";
 }
