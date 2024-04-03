@@ -1,5 +1,5 @@
 """
-ASGI config for lab7 project.
+ASGI config for shopback project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "lab7.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "shopback.settings")
 
 application = get_asgi_application()
